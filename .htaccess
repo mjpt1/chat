@@ -1,0 +1,38 @@
+# مهسا — safe for cPanel Apache 2.2/2.4 and LiteSpeed
+# Do not put "Require all denied" / "Deny from all" at this level (that 403s the whole app).
+
+DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Directory URL (/mahsa/) → index.php when host DirectoryIndex omits .php (otherwise Options -Indexes returns 403)
+  RewriteRule ^$ index.php [L]
+</IfModule>
+
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>
+
+<Files "config.php">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</Files>
+
+<FilesMatch "\.(sqlite|sq3|env)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+</IfModule>
