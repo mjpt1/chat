@@ -1,3 +1,32 @@
+<!-- gen:header -->
+<p align="center"><img src=".github/cover.svg" alt="Mahsa Chat" width="100%"></p>
+
+<h1 align="center">Mahsa Chat</h1>
+<p align="center"><b>چت متنی، تماس صوتی و تصویری روی هاست اشتراکی، بدون سرور اختصاصی</b><br><i>Text, voice & video chat on plain PHP shared hosting (WebRTC)</i></p>
+<p align="center"><img alt="PHP" src="https://img.shields.io/badge/-PHP-e11d48?style=for-the-badge"> <img alt="MySQL" src="https://img.shields.io/badge/-MySQL-e11d48?style=for-the-badge"> <img alt="WebRTC" src="https://img.shields.io/badge/-WebRTC-e11d48?style=for-the-badge"> <img alt="JavaScript" src="https://img.shields.io/badge/-JavaScript-e11d48?style=for-the-badge"></p>
+
+<div dir="rtl">
+
+## ✨ امکانات
+
+- شناسه‌ی شش‌رقمی برای هر کاربر
+- تماس همتابه‌همتا با WebRTC
+- بدون Node، سوکت یا VPS
+- نصب گرافیکی روی cPanel
+
+</div>
+
+## 🚀 Quick start
+
+```bash
+Upload to public_html → open /install.php → delete install.php
+```
+
+---
+
+<!-- gen:docs -->
+## 📚 مستندات کامل · Full documentation
+
 # مهسا — گفتگوی متنی، صوتی و تصویری روی PHP
 
 سیستم چت یک‌به‌یک برای هاست اشتراکی سی‌پنل. هر کس حساب می‌سازد، یک شناسهٔ شش‌رقمی می‌گیرد، و با دادن آن شناسه می‌تواند متن بفرستد یا تماس صوتی/تصویری بگیرد.
@@ -34,3 +63,8 @@ php -S localhost:8080
 ```
 
 سپس `http://localhost:8080/install.php` — localhost از نظر مرورگر امن است و دوربین کار می‌کند.
+
+---
+
+<p align="center">ساخته‌شده توسط <a href="https://mahsen81.ir"><b>محسن جباره‌اصل</b></a> — برنامه‌نویسی، طراحی سایت، ربات و هوش مصنوعی<br>
+Built by <a href="https://mahsen81.ir">Mohsen Jabbareh-Asl</a> · ⭐ اگر مفید بود، ستاره بدهید · Need a custom version? <a href="https://mahsen81.ir">Get in touch</a></p>
